@@ -9,14 +9,14 @@ environ.Env.read_env(".env")
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY", default="django-insecure-g@@8apm#7%umy#2s^!1$c9!1x@+$9uby1v9ex$brkq$12_d2c7")
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG", default=True)
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
 
-#CSRF_TRUSTED_ORIGINS = [""]
+CSRF_TRUSTED_ORIGINS = [""]
 
 # Application definition
 
